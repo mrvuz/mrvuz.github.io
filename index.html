@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Call Go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#createChart").on('click', function() {
+                $.ajax({
+                    url: "/showchart",
+                    method: "GET",
+                    data: "password=" + $('input[name="password"]').val() + "&xPrice=" + $('input[name="xPrice"]').val() + "&xpc=" + $('input[name="xpc"]').val(),
+                    success: function(data) {
+                        $("#chart").html(data);
+                    },
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <button id="createChart" type="button" class="btn btn-primary">Create chart</button>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <table border="1" id="coinFound" class="table table-bordered table-striped sortable">
+        <tr>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+            <td>
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        //"width": 320,
+                        //"height": 320,
+                        "symbol": "BITTREX:NEOBTC",
+                        "interval": "5",
+                        "timezone": "Etc/UTC",
+                        "theme": "Light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "hideideas": true,
+                        "studies": [
+                            "BB@tv-basicstudies",
+                            //"MACD@tv-basicstudies",
+                            //"PSAR@tv-basicstudies",
+                            //"StochasticRSI@tv-basicstudies"
+                        ]
+                    });
+                </script>
+                <!-- TradingView Widget END -->
+
+            </td>
+        </tr>
+    </table>
+</body>
