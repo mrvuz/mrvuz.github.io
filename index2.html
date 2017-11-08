@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Call Go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#createChart").on('click', function() {
+                $.ajax({
+                    url: "/showchart",
+                    method: "GET",
+                    data: "password=" + $('input[name="password"]').val() + "&xPrice=" + $('input[name="xPrice"]').val() + "&xpc=" + $('input[name="xpc"]').val(),
+                    success: function(data) {
+                        $("#chart").html(data);
+                    },
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <button id="createChart" type="button" class="btn btn-primary">Create chart</button>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <table border="1" id="coinFound" class="table table-bordered table-striped sortable">
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:XSTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DTBBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DMDBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:GLDBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:SLRBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:PPCBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:FTCBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:MANABTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:RBYBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:SIBBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:GUPBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:WAVESBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:EMCBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DNTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:UNBBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:QTUMBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:LSKBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:MAIDBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DCTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:ZENBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:LSKBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:MAIDBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DCTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DCTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:ZENBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:GNOBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:CFIBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:CLUBBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:TKNBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:AGRSBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:SWTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:PTOYBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:BTSBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:GAMEBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:LTCBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:EXCLBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+        <tr class='row'>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:TRSTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:DASHBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:INCNTBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            <td class='col-sm-2'>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                    new TradingView.widget({
+                        'autosize': true,
+                        'symbol': 'BITTREX:QWARKBTC',
+                        'interval': '5',
+                        'timezone': 'Asia/Bangkok',
+                        'theme': 'Light',
+                        'style': '1',
+                        'locale': 'en',
+                        'toolbar_bg': '#f1f3f6',
+                        'enable_publishing': false,
+                        'hide_top_toolbar': true,
+                        'save_image': false,
+                        'hideideas': true,
+                        'studies': ['BB@tv-basicstudies'],
+                    });
+                </script>
+            </td>
+            </td>
+        </tr>
+
+    </table>
+    <!-- Start of SimpleHitCounter Code -->
+    <!-- Start of SimpleHitCounter Code -->
+    <div align="center"><img src="http://simplehitcounter.com/hit.php?uid=2313568&f=16777215&b=0" border="0" height="18" width="83" alt="boy diaper cake"></div>
+    <!-- End of SimpleHitCounter Code -->
+
+    <!-- End of SimpleHitCounter Code -->
+
+</body>
